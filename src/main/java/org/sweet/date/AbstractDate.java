@@ -6,24 +6,24 @@ import java.util.Date;
 
 public abstract class AbstractDate<T extends AbstractDate<T>> implements Serializable, Comparable<T> {
 
-    private static final long serialVersionUID = 5584182716548023346L;
+	private static final long serialVersionUID = 5584182716548023346L;
 
-    protected AbstractDate() {
-    }
+	protected AbstractDate() {
+	}
 
-    public final Date asDate() {
-        return asCalendar().getTime();
-    }
+	public final Date asDate() {
+		return asCalendar().getTime();
+	}
 
-    public boolean before(T other) {
-        return this.compareTo(other) < 0;
-    }
+	public boolean before(T other) {
+		return this.compareTo(other) < 0;
+	}
 
-    public boolean after(T other) {
-        return this.compareTo(other) > 0;
-    }
+	public boolean after(T other) {
+		return this.compareTo(other) > 0;
+	}
 
-    public abstract Calendar asCalendar();
+	public abstract Calendar asCalendar();
 
-    protected abstract void merge(Calendar calendar);
+	protected abstract void merge(Calendar calendar);
 }

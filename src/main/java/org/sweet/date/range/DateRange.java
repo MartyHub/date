@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import org.sweet.date.AbstractDate;
 
-
 public class DateRange<T extends AbstractDate<T>> implements Serializable {
 
 	private static final long serialVersionUID = 3661456018582942058L;

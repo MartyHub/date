@@ -4,7 +4,6 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 import org.sweet.date.BusinessDate;
 
-
 public class BusinessDateXmlAdapter extends XmlAdapter<String, BusinessDate> {
 
 	@Override

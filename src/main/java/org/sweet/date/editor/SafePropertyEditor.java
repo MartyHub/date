@@ -21,13 +21,15 @@ public abstract class SafePropertyEditor<T> extends PropertyEditorSupport {
 		if (text == null || "".equals(text)) {
 			setValue(null);
 		} else {
-			T value = fromText(text);
+			T value = doSetAsText(text);
 
 			setValue(value);
 		}
 	}
 
-	protected abstract String doGetAsText(T value);
+	protected String doGetAsText(T value) {
+		return value.toString();
+	}
 
-	protected abstract T fromText(String text);
+	protected abstract T doSetAsText(String text);
 }
